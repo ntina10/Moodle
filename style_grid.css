@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    /* overflow-y: hidden; */
 }
 
 html {
@@ -11,6 +12,16 @@ html {
     background-color:cadetblue ;
     overflow-x: hidden;
 
+}
+canvas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -3;
+    /* overflow-y: hidden; */
+    overflow: clip;
+    overflow-clip-margin: content-box; /* hihihi ....from the highloft */
+    
 }
 
 #myheader {
@@ -141,6 +152,27 @@ a {
     }
 }
 
+#scrolling {
+    display: flex;
+    width: 100%;
+    /* overflow-x: scroll; */
+    /* overflow: hidden; */
+    scroll-snap-type: x mandatory;
+    margin: 0 64px;
+    perspective: 1000;
+
+}
+.scroller {
+    display: flex;
+    /* flex-direction: column; */
+    
+    /* scroll-snap-align: start; */
+    width: calc(calc(100% / 3) - 16px);
+}
+.second-banner-s {
+    position: relative;
+}
+
 .scrolling-wrapper {
     grid-column: span 12;
     overflow-x: scroll;
@@ -186,16 +218,17 @@ a {
 
 
 .second-banner {
+    /* width: 300px; */
     position: relative;
     overflow: hidden;    /*so that border-radius of div acts on image*/
 }
 
 .second-banner-img {
     display: block;
-    width: 100%;
+    /* width: 100%; */
 }
 
-.second-banner .img-emotion {
+.img-emotion {
     border-radius: 120px;
     background-color: white;
     position: absolute;
@@ -365,9 +398,14 @@ a {
     font-size: 32px;
     line-height: 43px;
 }
-
-
-
+/* 
+h1 {
+    height: 200px;
+    font-size: 20px;
+} */
+/* #scrolling {
+    margin:0 64px;
+} */
 
 
 #play-pause {
