@@ -9,8 +9,14 @@
         <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,300,400&display=swap" rel="stylesheet">        
         <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/font-awesome.min.css"> -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
     </head>
     <body>
+        <canvas id="grid"></canvas>
+        
         <header>
             <div id="myheader">
                 <img src="img/logo_black.svg" alt="Moodle logo black">
@@ -34,6 +40,104 @@
         <!-- <div class="bubble1"></div>
         <div class="bubble2"></div>
         <div class="bubble3"></div> -->
+
+        <!-- <div id="scrolling">
+          
+            <div class="second-banner-s scroller">
+                <img class="second-banner-img" src="img/woman.jpg" alt="happy woman">
+                <div class="img-emotion">
+                    <img src="img/happy.svg" alt="happy emoji">
+                    <span>98% Happy!</span>
+                </div>
+            </div>
+            <div class="tracks-grid scroller">   
+                <div class="track">
+                    <img src="img/track1.svg" alt="">
+                    <p>Paper Planes<br><span class="fade">By M.I.A.</span></p>
+                    <div class="circular-progress">
+                 
+                        <div id="play-pause" class="play player1"></div>
+                    </div>
+                </div> 
+                <div class="track">
+                    <img src="img/track2.svg" alt="">
+                    <p>Kala<br><span class="fade">By M.I.A.</span></p>
+                    <div class="circular-progress2">
+                        <div id="play-pause" class="play player2"></div>
+                    </div>
+                </div> 
+                <div class="track">
+                    <img src="img/track3.svg" alt="">
+                    <p>Happy<br><span class="fade">By Pharell Williams</span></p>
+                    <div class="circular-progress3">
+                        <div id="play-pause" class="play player3"></div>
+                    </div>
+                </div>            
+            </div>
+           
+            <div class="second-banner-s scroller">
+                <img class="second-banner-img" src="img/woman.jpg" alt="happy woman">
+                <div class="img-emotion">
+                    <img src="img/happy.svg" alt="happy emoji">
+                    <span>98% Happy!</span>
+                </div>
+            </div>
+            <div class="tracks-grid scroller">   
+                <div class="track">
+                    <img src="img/track1.svg" alt="">
+                    <p>Paper Planes<br><span class="fade">By M.I.A.</span></p>
+                    <div class="circular-progress4">
+                        <div id="play-pause" class="play player4"></div>
+                    </div>
+                </div> 
+                <div class="track">
+                    <img src="img/track2.svg" alt="">
+                    <p>Kala<br><span class="fade">By M.I.A.</span></p>
+                    <div class="circular-progress5">
+                        <div id="play-pause" class="play player5"></div>
+                    </div>
+                </div> 
+                <div class="track">
+                    <img src="img/track3.svg" alt="">
+                    <p>Happy<br><span class="fade">By Pharell Williams</span></p>
+                    <div class="circular-progress6">
+                        <div id="play-pause" class="play player6"></div>
+                    </div>
+                </div>            
+            </div>
+          
+            <div class="second-banner-s scroller">
+                <img class="second-banner-img" src="img/woman.jpg" alt="happy woman">
+                <div class="img-emotion">
+                    <img src="img/happy.svg" alt="happy emoji">
+                    <span>98% Happy!</span>
+                </div>
+            </div>
+            <div class="tracks-grid scroller">   
+                <div class="track">
+                    <img src="img/track1.svg" alt="">
+                    <p>Paper Planes<br><span class="fade">By M.I.A.</span></p>
+                    <div class="circular-progress">
+                 
+                        <div id="play-pause" class="play player1"></div>
+                    </div>
+                </div> 
+                <div class="track">
+                    <img src="img/track2.svg" alt="">
+                    <p>Kala<br><span class="fade">By M.I.A.</span></p>
+                    <div class="circular-progress2">
+                        <div id="play-pause" class="play player2"></div>
+                    </div>
+                </div> 
+                <div class="track">
+                    <img src="img/track3.svg" alt="">
+                    <p>Happy<br><span class="fade">By Pharell Williams</span></p>
+                    <div class="circular-progress3">
+                        <div id="play-pause" class="play player3"></div>
+                    </div>
+                </div>            
+            </div>
+        </div> -->
 
         <main class="grid-container">
             <video class="square" autoplay loop muted src="img/surprise.mp4" type=video/mp4></video>
@@ -102,7 +206,7 @@
             </div> -->
             <!-- <div id="b"> -->
                 
-            <div id="b" class="scrolling-wrapper">
+            <div class="scrolling-wrapper">
                 <!-- FIRST SCROLL ITEM  -->
                 <div class="second-banner">
                     <img class="second-banner-img" src="img/woman.jpg" alt="happy woman">
@@ -303,7 +407,9 @@
         </main>
 
 
-        <script src="script.js" type="text/javascript"></script>
+        <script src="/script.js"></script>
+        
+
 
     </body>
 
