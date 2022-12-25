@@ -1,16 +1,24 @@
 // the canvas 
-var w = screen.width + 1200;
-var h = document.body.scrollHeight; //+ screen.height;
+var w = screen.width + 1200; //window.innerWidth; //
+var h = document.body.scrollHeight + window.innerHeight; // //+ screen.height;
 
 console.log('w', w, 'h', h);
+
+//const totalRects = w > 992 ? 7 : 4;
+// const rectWidth = w / totalRects
+
 // grid step
-var step = 230; 
+var step = screen.width / 7;//200//w / totalRects;
 var canvasElementId = 'grid';
 
 var canvas = document.getElementById(canvasElementId);
 // this is how you resize the canvas
 canvas.width  = w;
 canvas.height = h;
+canvas.style.width  = w + 'px';
+canvas.style.height = h + 'px';
+// canvas.style.top = -1290 + 'px';
+// canvas.style.right = -50 + 'px';
 
 var ctx = canvas.getContext('2d');
 
@@ -20,21 +28,19 @@ var drawGrid = function(ctx, w, h, step) {
     ctx.strokeStyle = '#BEBEBE';
     ctx.lineWidth = 0.38;
 
-    ctx.beginPath(); 
+    ctx.beginPath(); // x
     for (var x=0;x<=w;x+=step) {
-            ctx.moveTo(x, 0);
-            ctx.lineTo(x, h);
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, h);
     }
-    
     // the stroke will actually paint the current path 
     ctx.stroke(); 
     
-    ctx.beginPath(); 
+    ctx.beginPath(); // y
     for (var y=0;y<=h;y+=step) {
-            ctx.moveTo(0, y);
-            ctx.lineTo(w, y);
+        ctx.moveTo(0, y);
+        ctx.lineTo(w, y);
     }
-
     ctx.stroke(); 
 };
 
@@ -59,7 +65,7 @@ window.addEventListener('scroll', function() {
     var scrollPercent = scrollTop/scrollArea || 0;
     
     canvas.style.right = -scrollPercent*window.innerWidth*0.6 + 'px';
-    canvas.style.top = -1300 + scrollPercent*window.innerWidth*1.2 + 'px';
+    canvas.style.top = scrollPercent*window.innerWidth*1.2 + 'px';
     // square2.style.left = 800 - scrollPercent*window.innerWidth*0.6 + 'px';
   });
 
@@ -68,21 +74,24 @@ window.addEventListener('scroll', function() {
 // let scrollingWrapper = document.querySelector('.scrolling-wrapper');
 // let grid = document.querySelector('.grid-container');
 
-var controller = new ScrollMagic.Controller();
+//////////////////////////////////////////////////////////// SCROLL MAGIC
+// var controller = new ScrollMagic.Controller();
 
-var scrollHorizontal = new TimelineLite()
-  scrollHorizontal.to("#scrolling", 1,   {x: "-33%"})	
-  .to("#scrolling", 1,   {x: "-66%"})
-  .to("#scrolling", 1,   {x: "-100%"})
-//   .to("#scrolling", 1, {x:'-300px'})
+// var scrollHorizontal = new TimelineLite()
+//   scrollHorizontal.to("#scrolling", 1,   {x: "-33%"})	
+//   .to("#scrolling", 1,   {x: "-66%"})
+//   .to("#scrolling", 1,   {x: "-100%"})
+// //   .to("#scrolling", 1, {x:'-300px'})
 
-var horizontalScroll = new ScrollMagic.Scene({
-      triggerElement: "#scrolling",
-      triggerHook: 'onLeave',
-      duration: "300%"
-    }).setPin("#scrolling").setTween(scrollHorizontal).addTo(controller);
+// var horizontalScroll = new ScrollMagic.Scene({
+//       triggerElement: "#scrolling",
+//       triggerHook: 'onLeave',
+//       duration: "300%"
+//     }).setPin("#scrolling").setTween(scrollHorizontal).addTo(controller);
 
 // var controller = new ScrollMagic.Controller();
+/////////////////////////////////////////////////////////////////
+
 
 // var scrollHorizontal = new TimelineLite()
 //   scrollHorizontal.to("#scrolling-wrapper", 1,   {x: "-20%"})	
@@ -100,6 +109,7 @@ var horizontalScroll = new ScrollMagic.Scene({
 
 // FIRST PLAYER /////////////////////////////////////////////////
 const audio1 = document.getElementById('audio1');
+// const audio1 = new Audio('/audio/M.I.A.  Paper Planes.mp3');
 const btn1 = document.querySelector('.player1');
 let circularProgress = document.querySelector('.circular-progress');
 

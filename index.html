@@ -9,13 +9,13 @@
         <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,300,400&display=swap" rel="stylesheet">        
         <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/font-awesome.min.css"> -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script> -->
     </head>
     <body>
-        <canvas id="grid"></canvas>
+        <!-- <canvas id="grid"></canvas> -->
         
         <header>
             <div id="myheader">
@@ -31,11 +31,11 @@
         </header>
 
         <audio id="audio1" src="audio/M.I.A.  Paper Planes.mp3" type="audio/mpeg"></audio>
-        <audio id="audio2" src="audio/M.I.A.  Paper Planes.mp3"></audio>
-        <audio id="audio3" src="audio/Pharrell_Williams_-_Happy.mp3"></audio>
-        <audio id="audio4" src="audio/Pharrell_Williams_-_Happy.mp3"></audio>
-        <audio id="audio5" src="audio/M.I.A.  Paper Planes.mp3"></audio>
-        <audio id="audio6" src="audio/Pharrell_Williams_-_Happy.mp3"></audio>
+        <audio id="audio2" src="audio/M.I.A.  Paper Planes.mp3" type="audio/mpeg"></audio>
+        <audio id="audio3" src="audio/Pharrell_Williams_-_Happy.mp3" type="audio/mpeg"></audio>
+        <audio id="audio4" src="audio/Pharrell_Williams_-_Happy.mp3" type="audio/mpeg"></audio>
+        <audio id="audio5" src="audio/M.I.A.  Paper Planes.mp3" type="audio/mpeg"></audio>
+        <audio id="audio6" src="audio/Pharrell_Williams_-_Happy.mp3" type="audio/mpeg"></audio>
 
         <!-- <div class="bubble1"></div>
         <div class="bubble2"></div>
@@ -142,7 +142,7 @@
         <main class="grid-container">
             <video class="square" autoplay loop muted src="img/surprise.mp4" type=video/mp4></video>
             <div class="square first-ad">
-                <p class="first-ad-text">Your mood, in a headbanging playlist.</p>
+                <p class="first-ad-text">Your mood, in<br>a headbanging<br>playlist.</p>
                 <p class="button">Get the app</p>
             </div>
 
@@ -375,10 +375,12 @@
             </div>
             
             <footer>
-                <img class="surprised-footer" src="img/surprise_huge.svg" alt="">
+                <img class="surprised-footer" src="img/surprise_huge.svg" alt="surprised emoji">
                 <div class="footer-grid">
-                    <img class="left top" src="img/logo_white.svg" alt="Moodle logo">
-                    <div></div>
+                    <img class="left" src="img/logo_white.svg" alt="Moodle logo">
+
+                    <div class="white-space-footer"></div>
+                    
                     <div class="top">
                         <p>Support</p>
                         <p>Help Center</p>
@@ -397,8 +399,10 @@
     
                     <div class="mid-row"></div>
     
-                    <p class="left bot">© 2023 Moodle. All Rights Reserved.</p>
-                    <div></div>
+                    <p class="left">© 2023 Moodle. All Rights Reserved.</p>
+
+                    <div class="white-space-footer"></div>
+
                     <p class="bot">Terms of Use</p>
                     <p class="bot">Privacy Policy</p>
                     <p class="bot">Cookie Policy</p>
@@ -408,27 +412,8 @@
 
 
         <script src="script.js" type="text/javascript"></script>
-        
 
 
     </body>
 
 </html>
-
-<!-- <script>
-    const audio = document.getElementById('my-audio');
-    const progressBar = document.querySelector('.progress-bar-inner');
-
-    audio.addEventListener('timeupdate', () => {
-    const progress = (audio.currentTime / audio.duration) * 100;
-    progressBar.style.transform = `rotate(${progress}deg)`;
-    });
-
-    progressBar.addEventListener('click', () => {
-        if (audio.paused) {
-            audio.play();
-        } else {
-            audio.pause();
-        }
-    });
-</script> -->
